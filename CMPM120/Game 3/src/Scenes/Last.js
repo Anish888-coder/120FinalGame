@@ -15,7 +15,7 @@ class Last extends Phaser.Scene {
     create() {
         // Create a new tilemap game object which uses 18x18 pixel tiles, and is
         // 45 tiles wide and 25 tiles tall.
-        this.map = this.add.tilemap("platformer-level-1", 18, 18, 70, 25);
+        this.map = this.add.tilemap("Last", 18, 18, 70, 25);
         // Add a tileset to the map
         // First parameter: name we gave the tileset in Tiled
         // Second parameter: key for the tilesheet (from this.load.image in Load.js)
@@ -42,16 +42,16 @@ class Last extends Phaser.Scene {
         });
 
         
-        this.flagA = this.map.createFromObjects("Objects", {
-            name: "FlagA",
-            key: "tilemap_sheet",
-            frame: 111
-        });
+        //this.flagA = this.map.createFromObjects("Objects", {
+        //    name: "Flag",
+        //    key: "tilemap_sheet",
+        //    frame: 111
+        //});
         
         
 
         this.physics.world.enable(this.coins, Phaser.Physics.Arcade.STATIC_BODY);
-        this.physics.world.enable(this.flagA, Phaser.Physics.Arcade.STATIC_BODY);
+        //this.physics.world.enable(this.flagA, Phaser.Physics.Arcade.STATIC_BODY);
 
         // Create a Phaser group out of the array this.coins
         // This will be used for collision detection below.

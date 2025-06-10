@@ -58,7 +58,7 @@ class Platformer extends Phaser.Scene {
         this.coinGroup = this.add.group(this.coins);
 
         // set up player avatar
-        this.player = this.physics.add.sprite(400, 300, "platformer_characters", 0);
+        this.player = this.physics.add.sprite(0, 0, "platformer_characters", 0);
         
         this.physics.world.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
         this.player.setCollideWorldBounds(true);
@@ -158,4 +158,4 @@ class Platformer extends Phaser.Scene {
 }
 
 
-////TEST PUSH 2
+////TEST PUSH 3
